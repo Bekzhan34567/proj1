@@ -1,0 +1,37 @@
+{
+  "development": {
+    "username": "doadmin",
+    "password": "AVNS_3WIVCRis9PWjAZLWTz4",
+    "database": "defaultdb",
+    "host": "db-postgresql-fra1-09218-do-user-18185042-0.h.db.ondigitalocean.com",
+    "port": 25060,
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "doadmin",
+    "password": "your_password",
+    "database": "defaultdb",
+    "host": "db-postgresql-fra1-09218-do-user-18185042-0.h.db.ondigitalocean.com",
+    "port": 25060,
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
