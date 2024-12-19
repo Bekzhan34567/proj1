@@ -6,14 +6,10 @@ const client = new Client({
   user: "doadmin",
   password: "AVNS_3WIVCRis9PWjAZLWTz4",
   database: "defaultdb",
-  ssl: {
-    rejectUnauthorized: false,
-  },
+  ssl: { rejectUnauthorized: false },
 });
 
 client
   .connect()
-  .then(() => console.log("Connected to PostgreSQL"))
-  .catch((err) => console.error("Connection error", err.stack));
-
-module.exports = client;
+  .then(() => console.log("Connection successful"))
+  .catch((err) => console.error("Connection error:", err.stack));

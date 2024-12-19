@@ -1,10 +1,10 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const { createUser, getUserByEmail } = require("../models/User"); // Импортируем функции для работы с пользователями
+const { createUser, getUserByEmail } = require("../models/User"); 
 
 const jwtSecret = process.env.JWT_SECRET;
 
-// Регистрация пользователя
+
 exports.registerUser = async (req, res) => {
   const { username, email, password } = req.body;
 
@@ -22,12 +22,12 @@ exports.registerUser = async (req, res) => {
   }
 };
 
-// Логин пользователя
+
 exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    // Используем функцию для получения пользователя по email
+    
     const user = await getUserByEmail(email);
 
     if (!user) {
